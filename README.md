@@ -1,6 +1,6 @@
 # 🖥️ Windows Server Home Lab — Active Directory Environment
 
-> A hands-on home lab simulating a corporate Active Directory environment using Windows Server 2022 and Windows 10 Enterprise on Proxmox VE. Built to develop practical IT administration skills in identity management, Group Policy, DNS/DHCP, and PowerShell automation.
+> A hands-on home lab simulating a corporate Active Directory environment using Windows Server 2022 and Windows 11 Pro on Proxmox VE. Built to develop practical IT administration skills in identity management, Group Policy, DNS/DHCP, and PowerShell automation.
 
 ---
 
@@ -26,7 +26,7 @@ This project demonstrates the end-to-end setup of an on-premises Active Director
 │                                                     │
 │  ┌──────────────────┐      ┌──────────────────┐    │
 │  │      DC01        │      │    CLIENT01      │    │
-│  │  Windows Server  │      │  Windows 10 Ent  │    │
+│  │  Windows Server  │      │  Windows 11 Pro  │    │
 │  │      2022        │      │                  │    │
 │  │                  │      │  • Domain joined │    │
 │  │  • AD DS         │      │  • AD user login │    │
@@ -56,7 +56,7 @@ This project demonstrates the end-to-end setup of an on-premises Active Director
 |---|---|
 | Oracle VirtualBox | Hypervisor for running VMs |
 | Windows Server 2022 (Eval) | Domain Controller OS |
-| Windows 10 Enterprise (Eval) | Client workstation OS |
+| Windows 11 Pro | Client workstation OS |
 | Active Directory Domain Services | Identity & access management |
 | DNS Server | Name resolution for the domain |
 | DHCP Server | Automatic IP assignment for clients |
@@ -100,9 +100,10 @@ Created two virtual machines in VirtualBox:
 - Adapter 2: Internal Network (`AD_LAB`)
 
 **CLIENT01**
-- OS: Windows 10 Enterprise Evaluation
+- OS: Windows 11 Pro
 - RAM: 2048 MB | Disk: 50 GB
-- Adapter: Internal Network (`AD_LAB`)
+- TPM 2.0 emulation enabled in Proxmox (required for Windows 11)
+- Adapter: Internal bridge (`vmbr1`)
 
 ---
 
@@ -254,8 +255,9 @@ In my IT support role at a nonprofit organization, I work daily with Microsoft 3
 ## 📚 Resources Used
 
 - [YouTube Playlist — Windows Server Home Lab Project](https://youtube.com/playlist?list=PLAdEnQWAAbfXMY2D4HVZOe-ChfTKmaJfQ)
-- [Microsoft Evaluation Center](https://www.microsoft.com/en-us/evalcenter/) — Windows Server 2022 & Windows 10 Enterprise ISOs
-- [Oracle VirtualBox](https://www.virtualbox.org/)
+- [Microsoft Evaluation Center](https://www.microsoft.com/en-us/evalcenter/) — Windows Server 2022 ISO
+- [Windows 11 Pro ISO](https://www.microsoft.com/software-download/windows11)
+- [Proxmox VE](https://www.proxmox.com/en/downloads)
 - Microsoft Learn — Active Directory Documentation
 
 ---
