@@ -225,5 +225,5 @@ In my IT support role at a nonprofit organization, I work daily with Microsoft 3
 ## 👤 About
 
 **Yves** | IT Support Specialist | CompTIA A+, Network+, Security+  
-Working toward CCNA and FAA AMT certification  
-[GitHub Profile](https://github.com/yourusername) | [LinkedIn](https://linkedin.com/in/yourprofile)
+Working toward CCNA
+[LinkedIn](https://linkedin.com/in/yourprofile)
