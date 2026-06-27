@@ -54,7 +54,7 @@ This project demonstrates the end-to-end setup of an on-premises Active Director
 
 | Technology | Purpose |
 |---|---|
-| Oracle VirtualBox | Hypervisor for running VMs |
+| Proxmox VE | Hypervisor for running VMs |
 | Windows Server 2022 (Eval) | Domain Controller OS |
 | Windows 11 Pro | Client workstation OS |
 | Active Directory Domain Services | Identity & access management |
@@ -71,7 +71,7 @@ This project demonstrates the end-to-end setup of an on-premises Active Director
 windows-server-homelab/
 ├── README.md                    ← You are here
 ├── screenshots/
-│   ├── 01-virtualbox-vms.png
+│   ├── 01-proxmox-vms.png
 │   ├── 02-ad-ds-install.png
 │   ├── 03-domain-promotion.png
 │   ├── 04-ou-structure.png
@@ -91,7 +91,7 @@ windows-server-homelab/
 
 ### Phase 1 — VM Setup
 
-Created two virtual machines in VirtualBox:
+Created two virtual machines in Proxmox VE:
 
 **DC01 (Domain Controller)**
 - OS: Windows Server 2022 Standard Evaluation (Desktop Experience)
@@ -225,7 +225,7 @@ foreach ($name in $users) {
 
 - The relationship between DNS and Active Directory — AD won't function without proper DNS, which is why the DC is its own DNS server and clients must point to it
 - How OU design affects Group Policy scope — GPOs apply at the OU level and inherit downward
-- Why `Windows 10 Enterprise` is required for domain join — the Home edition lacks this capability
+- Why `Windows 11 Pro` is required for domain join — the Home edition lacks this capability
 - PowerShell as a force multiplier — what takes 30 minutes clicking through ADUC takes 30 seconds with a script
 - The importance of VM snapshots — being able to roll back saved hours of re-configuration
 
@@ -241,7 +241,7 @@ In my IT support role at a nonprofit organization, I work daily with Microsoft 3
 
 | Step | Screenshot |
 |---|---|
-| VirtualBox — Both VMs running | `screenshots/01-virtualbox-vms.png` |
+| Proxmox — Both VMs running | `screenshots/01-proxmox-vms.png` |
 | AD DS Role installation | `screenshots/02-ad-ds-install.png` |
 | Domain promotion wizard | `screenshots/03-domain-promotion.png` |
 | OU structure in ADUC | `screenshots/04-ou-structure.png` |
