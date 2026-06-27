@@ -176,48 +176,8 @@ corp.local
 whoami          # Returns: corp\username
 ping dc01       # Resolves and replies
 gpresult /r     # Confirms GPO applied
-```
 
----
-
-## 📜 PowerShell — Bulk User Creation Script
-
-Located at `/scripts/bulk-create-users.ps1`
-
-```powershell
-# bulk-create-users.ps1
-# Creates AD users from a predefined list and places them in the _HR OU
-
-$password = ConvertTo-SecureString "Welcome1!" -AsPlainText -Force
-
-$users = @(
-    "John Smith", "Jane Doe", "Carlos Rivera", "Aisha Johnson",
-    "Mike Chen", "Sara Patel", "David Kim", "Mia Torres",
-    "James Wilson", "Priya Nair"
-    # Add more as needed...
-)
-
-foreach ($name in $users) {
-    $first    = $name.Split(" ")[0]
-    $last     = $name.Split(" ")[1]
-    $username = ($first[0] + $last).ToLower()
-
-    New-ADUser `
-        -Name              "$first $last" `
-        -GivenName         $first `
-        -Surname           $last `
-        -SamAccountName    $username `
-        -UserPrincipalName "$username@corp.local" `
-        -AccountPassword   $password `
-        -PasswordNeverExpires $true `
-        -Enabled           $true `
-        -Path              "OU=_HR,DC=corp,DC=local"
-
-    Write-Host "✔ Created: $username" -ForegroundColor Green
-}
-```
-
----
+__
 
 ## 🧠 Key Takeaways
 
