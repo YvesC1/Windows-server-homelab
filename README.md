@@ -84,7 +84,7 @@ A comprehensive, step-by-step engineering guide for building an isolated, produc
 | **BIOS Mode** | UEFI / Legacy BIOS | SeaBIOS (Default) | OVMF (UEFI) + TPM 2.0 |
 | **vCPU Cores** | Host Hardware (Min 2 Cores) | 2 vCPU | 2 vCPU |
 | **RAM** | 8 GB – 16 GB+ | 2048 MB | 4096 MB |
-| **Primary Storage** | 32 GB+ (ext4/ZFS) | 50 GB (Thin Provisioned) | 64 GB (Thin Provisioned) |
+| **Primary Storage** | 1 TB (ext4/ZFS) | 50 GB (Thin Provisioned) | 64 GB (Thin Provisioned) |
 | **Data Storage** | - | 3 x 5 GB Virtual Disks (RAID 5) | 2 x 5 GB Virtual Disks (RAID 1 Mirror) |
 | **Network Interface**| `vmbr0` (Physical Management) | `vmbr1` (Internal Isolated) | `vmbr1` (Internal Isolated) |
 | **IP Allocation** | Static Management IP | Static (`192.168.0.10/24`) | Dynamic (`192.168.0.11`–`.254`) |
