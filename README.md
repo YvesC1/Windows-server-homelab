@@ -1,4 +1,4 @@
-# 🚀 Enterprise Virtual Machine Lab: Proxmox VE, Windows Server 2022 & Windows 11 Pro
+# Enterprise Virtual Machine Lab: Proxmox VE, Windows Server 2022 & Windows 11 Pro
 
 [![Proxmox VE](https://img.shields.io/badge/Hypervisor-Proxmox%20VE%208.x-E65100?style=for-the-badge&logo=proxmox&logoColor=white)](https://www.proxmox.com/)
 [![Windows Server](https://img.shields.io/badge/Domain%20Controller-Windows%20Server%202022-0078D4?style=for-the-badge&logo=windows-server&logoColor=white)](https://www.microsoft.com/evalcenter/evaluate-windows-server-2022)
